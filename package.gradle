@@ -1,0 +1,53 @@
+subprojects {
+    apply plugin: 'maven'
+    apply plugin: 'idea'
+
+    ext {
+        gradle_version = '3.0.1'
+        kotlin_version = '1.2.10'
+
+        public_repo = [
+                aliyun    : 'http://maven.aliyun.com/nexus/content/groups/public/',
+                jitpack_io: 'https://jitpack.io',
+        ]
+
+        test_implement = [
+                junit                      : 'junit:junit:4.6',
+                mockito_core               : 'org.mockito:mockito-core:2.7.22',
+                easymock                   : 'org.easymock:easymock:3.4',
+                powermock_core             : 'org.powermock:powermock-core:1.6.5',
+                powermock_module_junit4    : 'org.powermock:powermock-module-junit4:1.6.5',
+                powermock_api_easymock     : 'org.powermock:powermock-api-easymock:1.6.5',
+                okhttp3_logging_interceptor: 'com.squareup.okhttp3:logging-interceptor:3.8.0@jar',
+        ]
+
+        test_sprint = [
+                spring_boot_starter_web_test: "org.springframework.boot:spring-boot-starter-test"
+        ]
+
+        sprint_version = "2.0.0.RELEASE"
+
+        sprint_depends = [
+                spring_boot_starter       : "org.springframework.boot:spring-boot-starter",
+                spring_boot_starter_tomcat: "org.springframework.boot:spring-boot-starter-tomcat",
+                spring_boot_starter_web   : "org.springframework.boot:spring-boot-starter-web",
+                springfox_swagger2        : "io.springfox:springfox-swagger2:2.2.2",
+                springfox_swagger2_ui     : "io.springfox:springfox-swagger-ui:2.2.2",
+        ]
+
+        depends = [
+                kotlin_stdlib_jre7: "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version",
+        ]
+
+        provided_depends = [
+        ]
+
+        component_depends = [
+        ]
+
+        res_provided = [
+        ]
+        res_depends = [
+        ]
+    }
+}

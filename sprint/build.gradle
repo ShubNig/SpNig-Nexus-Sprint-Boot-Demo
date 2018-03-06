@@ -1,0 +1,29 @@
+apply plugin: 'java'
+// apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'idea'
+
+// jar {
+//     baseName = "sprint"
+//     version =  getVersionName()
+// }
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+
+    // test start
+    testCompile test_implement.junit
+    testCompile test_sprint.spring_boot_starter_web_test
+    // test end
+
+    compile sprint_depends.spring_boot_starter_web
+    compile sprint_depends.spring_boot_starter_tomcat
+//    compile sprint_depends.spring_boot_starter
+    compile sprint_depends.springfox_swagger2
+    compile sprint_depends.springfox_swagger2_ui
+}
