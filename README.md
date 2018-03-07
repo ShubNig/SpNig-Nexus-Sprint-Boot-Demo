@@ -9,7 +9,16 @@ http://start.spring.io/
 ./gradlew sprint:bootRun
 ```
 
-see at http://localhost:18888/
+see swagger at http://localhost:18888/swagger-ui.html
+
+# API map
+
+Host: http://localhost:18888/
+
+|METHOD|URL|Desc|
+|---|---|---|
+|GET|/sprint/v1/greeting|greeting|
+
 
 # project tree
 

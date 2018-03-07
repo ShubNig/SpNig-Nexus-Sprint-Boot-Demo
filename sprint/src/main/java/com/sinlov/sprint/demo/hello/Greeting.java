@@ -1,19 +1,16 @@
 package com.sinlov.sprint.demo.hello;
 
+import lombok.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Greeting {
-    private final long id;
-    private final String content;
+//    @Setter
+//    @Getter
+    private long id;
+//    @Setter
+//    @Getter
+    private String content;
 
-    public Greeting(long id, String content) {
-        this.id = id;
-        this.content = content;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public String getContent() {
-        return content;
-    }
 }

@@ -35,11 +35,14 @@ subprojects {
                 springfox_swagger2_ui     : "io.springfox:springfox-swagger-ui:2.2.2",
         ]
 
+        guava_version = "23.6-jre"
         depends = [
                 kotlin_stdlib_jre7: "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version",
+                guava             : "com.google.guava:guava:${guava_version}"
         ]
 
         provided_depends = [
+                lombok: "org.projectlombok:lombok:1.16.18",
         ]
 
         component_depends = [

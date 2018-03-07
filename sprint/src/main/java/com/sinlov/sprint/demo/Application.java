@@ -1,5 +1,6 @@
 package com.sinlov.sprint.demo;
 
+import com.google.common.base.Predicate;
 import com.sinlov.sprint.demo.conf.RouterConf;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -40,16 +41,19 @@ public class Application {
 
     @Bean
     public Docket testApi() {
+        // appInfo
         ApiInfo apiInfo = new ApiInfoBuilder()
                 .title(RouterConf.TAG)
                 .description("sinlov demo")
                 .build();
+        // path format
+        String pathFormat = String.format("/%s.*", RouterConf.TAG);
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("Test")
-                .apiInfo(apiInfo
-                ).select()
+                .apiInfo(apiInfo)
+                .select()
                 .paths(
-                        PathSelectors.regex(String.format("/%s.*", RouterConf.TAG))
+                        PathSelectors.regex(pathFormat)
                 ).build();
     }
 }

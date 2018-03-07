@@ -17,13 +17,15 @@ targetCompatibility = 1.8
 dependencies {
 
     // test start
-    testCompile test_implement.junit
-    testCompile test_sprint.spring_boot_starter_web_test
+    testImplementation test_implement.junit
+    testImplementation test_sprint.spring_boot_starter_web_test
     // test end
 
-    compile sprint_depends.spring_boot_starter_web
-    compile sprint_depends.spring_boot_starter_tomcat
+    implementation sprint_depends.spring_boot_starter_web
+    implementation sprint_depends.spring_boot_starter_tomcat
 //    compile sprint_depends.spring_boot_starter
-    compile sprint_depends.springfox_swagger2
-    compile sprint_depends.springfox_swagger2_ui
+    implementation sprint_depends.springfox_swagger2
+    implementation sprint_depends.springfox_swagger2_ui
+
+    compileOnly provided_depends.lombok
 }
